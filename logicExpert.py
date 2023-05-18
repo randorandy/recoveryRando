@@ -201,10 +201,7 @@ area_logic: AreaLogicType = {
         ),
         ("SunkenNestL", "RuinedConcourseBL"): lambda loadout: (
             True
-        ),
-        ("SunkenNestL", "RuinedConcourseTR"): lambda loadout: (
-            True
-        ),   
+        ),  
     },
 }
 
