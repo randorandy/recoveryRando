@@ -204,7 +204,8 @@ area_logic: AreaLogicType = {
         ),
         ("SunkenNestL", "RuinedConcourseTR"): lambda loadout: (
             True
-            # TODO: Expert needs energy and casual doesn't? And Casual can do it with supers, but expert can't?
+            # TODO: Expert needs 
+            and casual doesn't? And Casual can do it with supers, but expert can't?
         ),   
     },
 }
@@ -425,7 +426,7 @@ location_logic: LocationLogicType = {
     ),
     "Vanilla Ice Chozo": lambda loadout: (
         (businessCenter in loadout) and
-        (energy_req(790) in loadout)
+        (Varia in loadout)
     ),
     "Screw Attack": lambda loadout: (
         (GTsideLN in loadout) and
