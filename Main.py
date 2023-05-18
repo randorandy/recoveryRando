@@ -151,7 +151,9 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
 
     for loc in game.all_locations.values():
         write_location(romWriter, loc)
-
+    # Skip Intro
+    romWriter.writeBytes(0x16ebb, b"\x05")
+    
     # Morph Ball Fix
     romWriter.writeBytes(0x268ce, b"\x04")
     romWriter.writeBytes(0x26e02, b"\x04")
