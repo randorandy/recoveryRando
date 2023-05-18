@@ -204,8 +204,6 @@ area_logic: AreaLogicType = {
         ),
         ("SunkenNestL", "RuinedConcourseTR"): lambda loadout: (
             True
-            # TODO: Expert needs 
-            and casual doesn't? And Casual can do it with supers, but expert can't?
         ),   
     },
 }
