@@ -161,10 +161,14 @@ def write_rom(game: Game, romWriter: Optional[RomWriter] = None) -> str:
 
     # Suit animation skip patch
     romWriter.writeBytes(0x20717, b"\xea\xea\xea\xea")
+    
+    # Bomb extra-items glitch fix
+    romWriter.writeBytes(0x26154, b"\x00\x10")
+    
     romWriter.finalizeRom(rom1_path)
     print("Done!")
     print(f"Filename is {rom_name}")
-
+    
     return rom_name
 
 def get_spoiler(game: Game) -> str:
